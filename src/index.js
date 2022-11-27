@@ -41,5 +41,41 @@ const siteContent = { // BU NESNEYİ DEĞİŞTİRMEYİN
 
 console.log('Proje açıldı!')
 
+const navigationItems = document.querySelectorAll('nav a');
+/*
+navigationItems[0].textContent = siteContent['nav']['nav-item-1'];
+navigationItems[0].setAttribute('class','italic');
+navigationItems[1].textContent = siteContent['nav']['nav-item-2'];
+navigationItems[1].setAttribute('class','italic');
+navigationItems[2].textContent = siteContent['nav']['nav-item-3'];
+navigationItems[2].setAttribute('class','italic');
+navigationItems[3].textContent = siteContent['nav']['nav-item-4'];
+navigationItems[3].setAttribute('class','italic');
+navigationItems[4].textContent = siteContent['nav']['nav-item-5'];
+navigationItems[4].setAttribute('class','italic');
+navigationItems[5].textContent = siteContent['nav']['nav-item-6'];
+navigationItems[5].setAttribute('class','italic');
+navigationItems[6].textContent = siteContent['nav']['nav-item-7'];
+navigationItems[6].setAttribute('class','italic');
+*/
+var i =1;
+navigationItems.forEach ((a)=> {
+  a.textContent = siteContent['nav']['nav-item-'+i];
+  a.setAttribute('class','italic'); i++;
+})
+
+const logoImage = document.getElementById('logo-img');
+logoImage.src = siteContent['images']['logo-img'];
+
+var mainText = document.querySelector('.cta-text');
+mainText.querySelector('h1').textContent = siteContent['cta']['h1'];
+mainText.querySelector('button').textContent = siteContent['cta']['button'];
+
+const ctaImages = document.getElementById('cta-img')
+ctaImages.src = siteContent['images']['cta-img'];
+
+const mainTexth4 =document.querySelectorAll('.main-content.top-content .text-content h4');
+mainTexth4[0] = siteContent['ana-içerik']['özellikler-h4'];
+mainTexth4[1] = siteContent['ana-içerik']['hakkımızda-h4'];
 
 /* Kodlar Buradan aşağıya */
